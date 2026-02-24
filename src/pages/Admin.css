@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #e8f3fc 0%, #f9fbfd 100%);
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* === MAIN PAGE === */
+.admin-fullpage {
+  padding: 2rem 4rem;
+  min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-navbar h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* === SECTION CONTAINERS === */
+.webinars,
+.resources,
+.studyguides {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+/* === SECTION HEADERS === */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2,
+.resources h2 
+.studyguides h2{
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e293b;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+/* === TABLE === */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.data-table th {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.data-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* === BUTTONS === */
+.add-btn,
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn,
+.upload-btn {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 8px 14px;
+}
+
+.add-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #2563eb;
+}
+
+.edit-btn {
+  background-color: #facc15;
+  color: #1e293b;
+  margin-right: 6px;
+}
+
+.edit-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.save-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #6b7280;
+  color: white;
+}
+
+.upload-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.upload-btn:hover {
+  background-color: #059669;
+}
+
+/* === FORM MODAL === */
+.form-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h3 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* === RESOURCE SECTION === */
+.resources h2 {
+  border-left: 5px solid #10b981;
+  color: #064e3b;
+}
+
+.upload-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.upload-form input[type="file"],
+.upload-form input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.resource-list h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.resource-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.resource-list li:last-child {
+  border-bottom: none;
+}
+
+.resource-list a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resource-list a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .admin-fullpage {
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+}

@@ -1,0 +1,7 @@
+.home {
+  padding: 5rem;
+  text-align: center;
+  min-height: 70vh;           
+  display: block; 
+  font-size: 2rem;   
+}

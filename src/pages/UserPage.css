@@ -1,0 +1,184 @@
+/* === GENERAL PAGE STYLING === */
+.user-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f3 100%);
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+  color: #333;
+}
+
+/* === HEADER SECTION === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.btn-logout {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* === WEBINAR SECTION === */
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.webinar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === WEBINAR CARD === */
+.webinar-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.webinar-card:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+}
+
+.webinar-card h3 {
+  font-size: 1.3rem;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.webinar-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #475569;
+}
+
+.webinar-card a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.webinar-card a:hover {
+  text-decoration: underline;
+}
+
+/* === BUTTONS === */
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-register {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-register:hover {
+  background-color: #2563eb;
+  transform: scale(1.03);
+}
+
+.btn-register:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* === RESOURCES SECTION === */
+.resources-section {
+  margin-top: 3rem;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.resources-section h2 {
+  margin-bottom: 1rem;
+  border-left: 5px solid #10b981;
+  color: #064e3b;
+}
+
+.resources-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resources-section li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resources-section li:last-child {
+  border-bottom: none;
+}
+
+.resources-section li strong {
+  color: #111827;
+}
+
+.resources-section a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resources-section a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btn-logout {
+    align-self: flex-end;
+  }
+
+  .webinar-card {
+    width: 100%;
+  }
+}
