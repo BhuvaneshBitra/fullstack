@@ -6,6 +6,7 @@ export default function RegisterPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user');
+  const [isSuccessAnim, setIsSuccessAnim] = useState(false);
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -19,12 +20,15 @@ export default function RegisterPage() {
     }
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
-    alert('Registration successful! Please login to continue.');
-    navigate('/login');
+
+    setIsSuccessAnim(true);
+    setTimeout(() => {
+      navigate('/login');
+    }, 500); // Wait for pulseSuccess animation to complete
   };
 
   return (
-    <div className="register">
+    <div className={`register ${isSuccessAnim ? 'success-animation' : ''}`}>
       <h2>Register for Digital Library</h2>
       <form onSubmit={handleRegister}>
         <input
